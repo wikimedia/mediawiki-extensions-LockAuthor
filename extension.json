@@ -1,0 +1,51 @@
+{
+	"name": "LockAuthor",
+	"version": "1.0",
+	"author": [
+		"Vedmaka"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:LockAuthor",
+	"descriptionmsg": "lockauthor-desc",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"license-name": "GPL-2.0-or-later",
+	"MessagesDirs": {
+		"LockAuthor": [
+			"i18n"
+		]
+	},
+	"config": {
+		"LockAuthorExcludedNamespaces": {
+			"value": [],
+			"merge_strategy": "array_plus_2d"
+		},
+		"LockAuthorActions": {
+			"value": [
+				"edit",
+				"create"
+			],
+			"merge_strategy": "array_plus_2d"
+		}
+	},
+	"AvailableRights": [
+		"editall"
+	],
+	"GroupPermissions": {
+		"sysop": {
+			"editall": true
+		}
+	},
+	"Hooks": {
+		"userCan": "LockAuthor\\LockAuthorHooks::onUserCan"
+	},
+	"AutoloadClasses": {
+		"LockAuthor\\LockAuthor": "LockAuthor.php",
+		"LockAuthor\\LockAuthorHooks": "LockAuthorHooks.php"
+	},
+	"ConfigRegistry": {
+		"LockAuthor": "GlobalVarConfig::newInstance"
+	},
+	"manifest_version": 2
+}

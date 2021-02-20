@@ -15,7 +15,7 @@ class LockAuthor {
 	 * @return LockAuthor
 	 */
 	public static function getInstance() {
-		if( self::$instance === null ) {
+		if ( self::$instance === null ) {
 			self::$instance = new self();
 		}
 		return self::$instance;
@@ -56,20 +56,20 @@ class LockAuthor {
 	 * @return bool
 	 */
 	public function isAllowed( $title, $user, $action ) {
-		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig('LockAuthor');
+		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'LockAuthor' );
 
 		// Skip excluded namespaces right away
-		if( in_array( $title->getNamespace(), $config->get( 'LockAuthorExcludedNamespaces' ) ) ) {
+		if ( in_array( $title->getNamespace(), $config->get( 'LockAuthorExcludedNamespaces' ) ) ) {
 			return true;
 		}
 
 		// Skip not related actions
-		if( !in_array( $action, $config->get( 'LockAuthorActions' ) ) ) {
+		if ( !in_array( $action, $config->get( 'LockAuthorActions' ) ) ) {
 			return true;
 		}
 
 		// Skip if subject user already has necessary rights
-		if( MediaWikiServices::getInstance()->getPermissionManager()->userHasRight( $user, 'editall' ) ) {
+		if ( MediaWikiServices::getInstance()->getPermissionManager()->userHasRight( $user, 'editall' ) ) {
 			return true;
 		}
 
@@ -77,7 +77,7 @@ class LockAuthor {
 			return true;
 		}
 
-		if ( LockAuthor::getInstance()->isAuthor( $title, $user ) ) {
+		if ( self::getInstance()->isAuthor( $title, $user ) ) {
 			return true;
 		}
 

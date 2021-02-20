@@ -3,7 +3,6 @@
 namespace LockAuthor;
 
 use Exception;
-use MediaWiki\MediaWikiServices;
 use Title;
 use User;
 

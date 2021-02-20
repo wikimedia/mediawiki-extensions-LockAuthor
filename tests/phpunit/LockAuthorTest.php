@@ -41,9 +41,9 @@ class LockAuthorTest extends MediaWikiLangTestCase {
 		$user = $this->getTestUser()->getUser();
 		$title = $this->getExistingTestPage( 'TestLockAuthorExisting1' )->getTitle();
 		$result = $this->la->isAuthor( $title, $user );
-		$this->assertEquals( false, $result );
+		$this->assertFalse( $result );
 		$result = $this->la->isAuthor( $title, $this->getTestSysop()->getUser() );
-		$this->assertEquals( true, $result );
+		$this->assertTrue( $result );
 	}
 
 	public function testIsAllowed() {
@@ -51,31 +51,31 @@ class LockAuthorTest extends MediaWikiLangTestCase {
 		// Existing is not allowed for non creator
 		$title = $this->getExistingTestPage( 'TestLockAuthorExisting1' )->getTitle();
 		$result = $this->la->isAllowed( $title, $user, 'edit' );
-		$this->assertEquals( false, $result );
+		$this->assertFalse( $result );
 		// Non-existing is allowed
 		$title = $this->getNonexistingTestPage( 'TestLockAuthorNonExisting1' )->getTitle();
 		$result = $this->la->isAllowed( $title, $user, 'edit' );
-		$this->assertEquals( true, $result );
+		$this->assertTrue( $result );
 		// Existing is allowed for  creator
 		$user = $this->getTestSysop()->getUser();
 		$title = $this->getExistingTestPage( 'TestLockAuthorExisting2' )->getTitle();
 		$result = $this->la->isAllowed( $title, $user, 'edit' );
-		$this->assertEquals( true, $result );
+		$this->assertTrue( $result );
 		// Editor is allowed to edit all
 		$user = $this->getTestUser( 'editor' )->getUser();
 		$title = $this->getExistingTestPage( 'TestLockAuthorExisting2' )->getTitle();
 		$result = $this->la->isAllowed( $title, $user, 'edit' );
-		$this->assertEquals( true, $result );
+		$this->assertTrue( $result );
 		// Excluded namespaces
 		$user = $this->getTestUser()->getUser();
 		$title = $this->getExistingTestPage( Title::newFromText( 'TestFile', NS_FILE ) )->getTitle();
 		$result = $this->la->isAllowed( $title, $user, 'edit' );
-		$this->assertEquals( true, $result );
+		$this->assertTrue( $result );
 		// Not related actions
 		$user = $this->getTestUser()->getUser();
 		$title = $this->getExistingTestPage( 'TestLockAuthorExisting1' )->getTitle();
 		$result = $this->la->isAllowed( $title, $user, 'read' );
-		$this->assertEquals( true, $result );
+		$this->assertTrue( $result );
 	}
 
 }

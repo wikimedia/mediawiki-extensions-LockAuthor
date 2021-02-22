@@ -37,6 +37,10 @@ class LockAuthorTest extends MediaWikiLangTestCase {
 		$this->la = LockAuthor::getInstance();
 	}
 
+	/**
+	 * @throws MWException
+	 * @covers \LockAuthor\LockAuthor::isAuthor
+	 */
 	public function testIsAuthor() {
 		$user = $this->getTestUser()->getUser();
 		$title = $this->getExistingTestPage( 'TestLockAuthorExisting1' )->getTitle();
@@ -46,6 +50,10 @@ class LockAuthorTest extends MediaWikiLangTestCase {
 		$this->assertTrue( $result );
 	}
 
+	/**
+	 * @throws MWException
+	 * @covers \LockAuthor\LockAuthor::isAllowed
+	 */
 	public function testIsAllowed() {
 		$user = $this->getTestUser()->getUser();
 		// Existing is not allowed for non creator

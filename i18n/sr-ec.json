@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": "Kizule"
+		"authors": [
+			"Kizule"
+		]
 	},
 	"lockauthor-desc": "Спречава кориснике да уређују странице које нису направили."
 }

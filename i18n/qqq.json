@@ -1,6 +1,9 @@
 {
 	"@metadata": {
-		"authors": "Vedmaka"
+		"authors": [
+			"Raymond",
+			"Vedmaka"
+		]
 	},
-	"lockauthor-desc": "Extension description"
+	"lockauthor-desc": "{{desc|name=Lock Author|url=https://www.mediawiki.org/wiki/Extension:LockAuthor}}"
 }

@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Verdy p"
 		]
 	},
-	"lockauthor-desc": "Empêche les utilisateurs de modifier les pages qu’ils n’ont pas créées"
+	"lockauthor-desc": "Empêche les utilisateurs de modifier les pages qu’ils n’ont pas créées",
+	"action-editall": "modifier toutes les pages d’utilisateurs",
+	"right-editall": "Permet de modifier toutes les pages d’utilisateurs"
 }

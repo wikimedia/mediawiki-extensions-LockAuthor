@@ -2,5 +2,7 @@
 	"@metadata": {
 		"authors": []
 	},
-	"lockauthor-desc": "Verhindert, dass Benutzer Seiten bearbeiten können, die sie nicht erstellt haben"
+	"lockauthor-desc": "Verhindert, dass Benutzer Seiten bearbeiten können, die sie nicht erstellt haben",
+	"action-editall": "Ermöglicht die Bearbeitung jeder Benutzerseite",
+	"right-editall": "Ermöglicht die Bearbeitung jeder Benutzerseite"
 }

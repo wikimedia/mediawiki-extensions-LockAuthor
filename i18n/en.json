@@ -3,6 +3,6 @@
 		"authors": "Vedmaka"
 	},
 	"lockauthor-desc": "Prevents users from editing pages they haven't created",
-	"action-editall": "Allows to edit every user pages",
+	"action-editall": "edit every user pages",
 	"right-editall": "Allows to edit every user pages"
 }

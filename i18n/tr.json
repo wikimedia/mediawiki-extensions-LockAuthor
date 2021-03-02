@@ -4,5 +4,7 @@
 			"Joseph"
 		]
 	},
-	"lockauthor-desc": "Kullanıcıların kendi oluşturmadıkları sayfaları değiştirmesini önler"
+	"lockauthor-desc": "Kullanıcıların kendi oluşturmadıkları sayfaları değiştirmesini önler",
+	"action-editall": "her kullanıcı sayfasını değiştirmeye",
+	"right-editall": "Her kullanıcı sayfasını değiştirmeye izin verir"
 }

@@ -4,5 +4,7 @@
 			"Mainframe98"
 		]
 	},
-	"lockauthor-desc": "Voorkomt dat gebruikers pagina's kunnen bewerken die zij niet aangemaakt hebben"
+	"lockauthor-desc": "Voorkomt dat gebruikers pagina's kunnen bewerken die zij niet aangemaakt hebben",
+	"action-editall": "elke gebruikerspagina te bewerken",
+	"right-editall": "Laat toe elke gebruikerspagina te bewerken"
 }

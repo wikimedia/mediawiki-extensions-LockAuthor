@@ -3,6 +3,6 @@
 		"authors": []
 	},
 	"lockauthor-desc": "Verhindert, dass Benutzer Seiten bearbeiten können, die sie nicht erstellt haben",
-	"action-editall": "jede Benutzerseite bearbeiten",
-	"right-editall": "Ermöglicht die Bearbeitung jeder Benutzerseite"
+	"action-editall": "alle Seiten bearbeiten",
+	"right-editall": "Ermöglicht die Bearbeitung jeder Seite"
 }

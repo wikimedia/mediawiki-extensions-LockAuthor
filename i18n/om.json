@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahrada2016"
+			"Ahrada2016",
+			"Maammee"
 		]
 	},
-	"action-editall": "fuula fayyadamaa kamuu gulaali."
+	"action-editall": "fuulota maraa gulaali",
+	"right-editall": "Fuulota hunda gulaaluu hayyama"
 }

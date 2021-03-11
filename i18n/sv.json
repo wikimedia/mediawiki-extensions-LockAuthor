@@ -4,5 +4,6 @@
 			"Sabelöga"
 		]
 	},
-	"lockauthor-desc": "Hindrar användare från att redigera sidor de inte skapat"
+	"lockauthor-desc": "Hindrar användare från att redigera sidor de inte skapat",
+	"action-editall": "redigera alla sidor"
 }

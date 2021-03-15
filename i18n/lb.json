@@ -4,5 +4,7 @@
 			"Robby"
 		]
 	},
-	"action-editall": "all Säiten änneren"
+	"lockauthor-desc": "Verhënnert datt Benotzer Säiten änneren déi si net ugeluecht hunn",
+	"action-editall": "all Säiten änneren",
+	"right-editall": "Erlaabt et fir all Säiten z'änneren"
 }

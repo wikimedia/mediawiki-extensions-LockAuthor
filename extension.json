@@ -41,8 +41,8 @@
 		"userCan": "LockAuthor\\LockAuthorHooks::onUserCan"
 	},
 	"AutoloadClasses": {
-		"LockAuthor\\LockAuthor": "LockAuthor.php",
-		"LockAuthor\\LockAuthorHooks": "LockAuthorHooks.php"
+		"LockAuthor\\LockAuthor": "includes/LockAuthor.php",
+		"LockAuthor\\LockAuthorHooks": "includes/LockAuthorHooks.php"
 	},
 	"ConfigRegistry": {
 		"LockAuthor": "GlobalVarConfig::newInstance"

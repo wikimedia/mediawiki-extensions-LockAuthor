@@ -4,6 +4,7 @@ use LockAuthor\LockAuthor;
 
 /**
  * Class LockAuthorTest
+ * @group extension-LockAuthor
  * @group Database
  */
 class LockAuthorTest extends MediaWikiLangTestCase {

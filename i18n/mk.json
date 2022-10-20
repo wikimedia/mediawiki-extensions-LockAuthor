@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bjankuloski06"
+			"Bjankuloski06",
+			"Vlad5250"
 		]
 	},
 	"lockauthor-desc": "Спречува корисници да уредуваат страници кои самите не ги создале",
 	"action-editall": "уредување на сите страници",
-	"right-editall": "Овозможува уредување на сите страници"
+	"right-editall": "Уредување на сите страници"
 }

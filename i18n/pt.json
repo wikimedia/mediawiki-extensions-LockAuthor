@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"lockauthor-desc": "Impede que os utilizadores editem páginas que não criaram",
+	"action-editall": "editar todas as páginas"
+}

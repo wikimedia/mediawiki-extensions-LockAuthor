@@ -38,7 +38,7 @@
 		}
 	},
 	"Hooks": {
-		"userCan": "LockAuthor\\LockAuthorHooks::onUserCan"
+		"getUserPermissionsErrors": "LockAuthor\\LockAuthorHooks::onGetUserPermissionsErrors"
 	},
 	"AutoloadClasses": {
 		"LockAuthor\\LockAuthor": "includes/LockAuthor.php",

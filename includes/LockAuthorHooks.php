@@ -40,7 +40,7 @@ class LockAuthorHooks {
 	 * @return bool
 	 * @throws Exception
 	 */
-	public static function onUserCan( $title, $user, $action, &$result ) {
+	public static function onGetUserPermissionsErrors( $title, $user, $action, &$result ) {
 		if ( !LockAuthor::getInstance()->isAllowed( $title, $user, $action ) ) {
 			$result = false;
 			return false;

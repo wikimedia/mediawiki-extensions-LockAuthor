@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"lockauthor-desc": "מניעה ממשתמשים לערוך דפים שהם לא יצרו",
+	"action-editall": "לערוך את כל הדפים",
+	"right-editall": "עריכת כל הדפים"
+}

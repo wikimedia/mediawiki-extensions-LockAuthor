@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"lockauthor-desc": "Uporabnikom prepreči urejanje strani, ki jih niso ustvarili",
+	"action-editall": "urejanje vseh strani"
+}

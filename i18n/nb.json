@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Avilena"
+			"Avilena",
+			"Jon Harald Søby"
 		]
 	},
+	"lockauthor-desc": "Forhindrer brukere fra å redigere sider de ikke har opprettet selv",
+	"action-editall": "redigere alle sider",
 	"right-editall": "Redigere alle sider"
 }

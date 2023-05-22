@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"MathXplore"
+			"MathXplore",
+			"Shirayuki"
 		]
 	},
-	"right-editall": "すべてのページを編集する"
+	"action-editall": "すべてのページの編集",
+	"right-editall": "すべてのページを編集"
 }

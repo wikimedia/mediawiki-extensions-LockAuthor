@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"DiegoAmbrocio",
-			"Francodiaz7"
+			"Francodiaz7",
+			"No se"
 		]
 	},
+	"lockauthor-desc": "Evita que los usuarios editen páginas que no han creado.",
 	"action-editall": "editar todas las páginas",
 	"right-editall": "Editar todas las páginas"
 }

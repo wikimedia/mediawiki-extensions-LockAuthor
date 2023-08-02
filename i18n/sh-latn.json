@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"lockauthor-desc": "Sprečava korisnike da uređuju stranice koje nisu napravili",
+	"action-editall": "uređivanje svih stranica"
+}

@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
-	"lockauthor-desc": "Verhënnert datt Benotzer Säiten änneren déi si net ugeluecht hunn",
+	"lockauthor-desc": "Verhënnert datt Benotzer Säiten änneren, déi si net ugeluecht hunn",
 	"action-editall": "all Säiten änneren",
 	"right-editall": "All Säiten änneren"
 }

@@ -14,17 +14,15 @@ class LockAuthorTest extends MediaWikiLangTestCase {
 	private $la;
 
 	public function setUp(): void {
-		$this->setMwGlobals(
-			[
-				'wgLockAuthorExcludedNamespaces' => [
-					NS_FILE
-				],
-				'wgLockAuthorActions' => [
-					'edit',
-					'create'
-				]
-			]
-		);
+		$this->overrideConfigValues( [
+			'LockAuthorExcludedNamespaces' => [
+				NS_FILE,
+			],
+			'LockAuthorActions' => [
+				'edit',
+				'create',
+			],
+		] );
 		$this->setGroupPermissions( '*', 'edit', false );
 		$this->setGroupPermissions( '*', 'createpage', false );
 

@@ -3,6 +3,8 @@
 namespace LockAuthor;
 
 use Exception;
+use MediaWiki\Permissions\Hook\GetUserPermissionsErrorsHook;
+use MessageSpecifier;
 use Title;
 use User;
 
@@ -26,7 +28,7 @@ use User;
  * Class LockAuthorHooks
  * @package LockAuthor
  */
-class LockAuthorHooks {
+class LockAuthorHooks implements GetUserPermissionsErrorsHook {
 
 	/**
 	 * Override allowed actions based on extension config, allowing edit and create actions
@@ -35,14 +37,14 @@ class LockAuthorHooks {
 	 * @param Title $title
 	 * @param User $user
 	 * @param string $action
-	 * @param bool &$result
+	 * @param array|string|MessageSpecifier &$result
 	 *
 	 * @return bool
 	 * @throws Exception
 	 */
-	public static function onGetUserPermissionsErrors( $title, $user, $action, &$result ) {
+	public function onGetUserPermissionsErrors( $title, $user, $action, &$result ) {
 		if ( !LockAuthor::getInstance()->isAllowed( $title, $user, $action ) ) {
-			$result = false;
+			$result = wfMessage( 'badaccess-group0' );
 			return false;
 		}
 	}

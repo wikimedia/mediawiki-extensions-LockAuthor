@@ -37,8 +37,13 @@
 			"editall": true
 		}
 	},
+	"HookHandlers": {
+		"main": {
+			"class": "LockAuthor\\LockAuthorHooks"
+		}
+	},
 	"Hooks": {
-		"getUserPermissionsErrors": "LockAuthor\\LockAuthorHooks::onGetUserPermissionsErrors"
+		"getUserPermissionsErrors": "main"
 	},
 	"AutoloadClasses": {
 		"LockAuthor\\LockAuthor": "includes/LockAuthor.php",

@@ -39,7 +39,12 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "LockAuthor\\LockAuthorHooks"
+			"class": "LockAuthor\\LockAuthorHooks",
+			"services": [
+				"ConfigFactory",
+				"PermissionManager",
+				"RevisionLookup"
+			]
 		}
 	},
 	"Hooks": {

@@ -2,23 +2,26 @@
 
 namespace LockAuthor;
 
-use MediaWiki\MediaWikiServices;
+use Config;
+use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Revision\RevisionLookup;
 use Title;
 use User;
 
 class LockAuthor {
 
-	/** @var LockAuthor|null */
-	private static $instance = null;
+	private Config $config;
+	private PermissionManager $permissionManager;
+	private RevisionLookup $revisionLookup;
 
-	/**
-	 * @return LockAuthor
-	 */
-	public static function getInstance() {
-		if ( self::$instance === null ) {
-			self::$instance = new self();
-		}
-		return self::$instance;
+	public function __construct(
+		Config $config,
+		PermissionManager $permissionManager,
+		RevisionLookup $revisionLookup
+	) {
+		$this->config = $config;
+		$this->permissionManager = $permissionManager;
+		$this->revisionLookup = $revisionLookup;
 	}
 
 	/**
@@ -30,7 +33,7 @@ class LockAuthor {
 	 * @return bool
 	 */
 	public function isAuthor( $title, $user ) {
-		$rev = MediaWikiServices::getInstance()->getRevisionLookup()->getFirstRevision( $title );
+		$rev = $this->revisionLookup->getFirstRevision( $title );
 
 		if ( !$rev ) {
 			// this should never happen, but if for any reason the title does not have
@@ -56,20 +59,18 @@ class LockAuthor {
 	 * @return bool
 	 */
 	public function isAllowed( $title, $user, $action ) {
-		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'LockAuthor' );
-
 		// Skip excluded namespaces right away
-		if ( in_array( $title->getNamespace(), $config->get( 'LockAuthorExcludedNamespaces' ) ) ) {
+		if ( in_array( $title->getNamespace(), $this->config->get( 'LockAuthorExcludedNamespaces' ) ) ) {
 			return true;
 		}
 
 		// Skip not related actions
-		if ( !in_array( $action, $config->get( 'LockAuthorActions' ) ) ) {
+		if ( !in_array( $action, $this->config->get( 'LockAuthorActions' ) ) ) {
 			return true;
 		}
 
 		// Skip if subject user already has necessary rights
-		if ( MediaWikiServices::getInstance()->getPermissionManager()->userHasRight( $user, 'editall' ) ) {
+		if ( $this->permissionManager->userHasRight( $user, 'editall' ) ) {
 			return true;
 		}
 
@@ -77,7 +78,7 @@ class LockAuthor {
 			return true;
 		}
 
-		if ( self::getInstance()->isAuthor( $title, $user ) ) {
+		if ( $this->isAuthor( $title, $user ) ) {
 			return true;
 		}
 

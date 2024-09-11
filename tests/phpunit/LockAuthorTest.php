@@ -32,7 +32,12 @@ class LockAuthorTest extends MediaWikiLangTestCase {
 		$this->setGroupPermissions( 'editor', 'edit', true );
 		$this->setGroupPermissions( 'editor', 'createpage', true );
 		$this->setGroupPermissions( 'editor', 'editall', true );
-		$this->la = LockAuthor::getInstance();
+		$services = $this->getServiceContainer();
+		$this->la = new LockAuthor(
+			$services->getConfigFactory()->makeConfig( 'LockAuthor' ),
+			$services->getPermissionManager(),
+			$services->getRevisionLookup()
+		);
 	}
 
 	/**

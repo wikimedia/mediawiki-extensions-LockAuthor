@@ -2,8 +2,11 @@
 
 namespace LockAuthor;
 
+use ConfigFactory;
 use Exception;
 use MediaWiki\Permissions\Hook\GetUserPermissionsErrorsHook;
+use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Revision\RevisionLookup;
 use MessageSpecifier;
 use Title;
 use User;
@@ -30,6 +33,20 @@ use User;
  */
 class LockAuthorHooks implements GetUserPermissionsErrorsHook {
 
+	private LockAuthor $lockAuthor;
+
+	public function __construct(
+		ConfigFactory $configFactory,
+		PermissionManager $permissionManager,
+		RevisionLookup $revisionLookup
+	) {
+		$this->lockAuthor = new LockAuthor(
+			$configFactory->makeConfig( 'LockAuthor' ),
+			$permissionManager,
+			$revisionLookup
+		);
+	}
+
 	/**
 	 * Override allowed actions based on extension config, allowing edit and create actions
 	 * to be performed, called from PermissionManager::checkPermissionHooks
@@ -43,7 +60,7 @@ class LockAuthorHooks implements GetUserPermissionsErrorsHook {
 	 * @throws Exception
 	 */
 	public function onGetUserPermissionsErrors( $title, $user, $action, &$result ) {
-		if ( !LockAuthor::getInstance()->isAllowed( $title, $user, $action ) ) {
+		if ( !$this->lockAuthor->isAllowed( $title, $user, $action ) ) {
 			$result = wfMessage( 'badaccess-group0' );
 			return false;
 		}

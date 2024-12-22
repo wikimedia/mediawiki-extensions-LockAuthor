@@ -41,11 +41,7 @@ class LockAuthor {
 			return true;
 		}
 
-		if ( $user->getName() == $rev->getUser()->getName() ) {
-			return true;
-		}
-
-		return false;
+		return $user->equals( $rev->getUser() );
 	}
 
 	/**

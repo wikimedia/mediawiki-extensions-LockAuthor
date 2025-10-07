@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"lockauthor-desc": "Impide que os usuarios editen as páxinas que non crearon",
+	"action-editall": "editar todas as páxinas",
+	"right-editall": "Editar todas as páxinas"
+}

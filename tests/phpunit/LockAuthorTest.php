@@ -1,6 +1,7 @@
 <?php
 
 use LockAuthor\LockAuthor;
+use MediaWiki\Title\Title;
 
 /**
  * Class LockAuthorTest

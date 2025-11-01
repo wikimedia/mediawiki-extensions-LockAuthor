@@ -5,7 +5,7 @@ namespace LockAuthor;
 use Config;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionLookup;
-use Title;
+use MediaWiki\Title\Title;
 use User;
 
 class LockAuthor {

@@ -8,7 +8,7 @@
 	"descriptionmsg": "lockauthor-desc",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.39.4"
+		"MediaWiki": ">= 1.41.0"
 	},
 	"license-name": "GPL-2.0-or-later",
 	"MessagesDirs": {
@@ -55,7 +55,7 @@
 		"LockAuthor\\LockAuthorHooks": "includes/LockAuthorHooks.php"
 	},
 	"ConfigRegistry": {
-		"LockAuthor": "GlobalVarConfig::newInstance"
+		"LockAuthor": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"manifest_version": 2
 }

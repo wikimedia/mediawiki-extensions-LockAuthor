@@ -7,8 +7,8 @@ use Exception;
 use MediaWiki\Permissions\Hook\GetUserPermissionsErrorsHook;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionLookup;
+use MediaWiki\Title\Title;
 use MessageSpecifier;
-use Title;
 use User;
 
 /**

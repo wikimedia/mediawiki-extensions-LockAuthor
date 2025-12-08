@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Peterxy12",
 			"坑触可"
 		]
 	},
-	"action-editall": "编辑所有页面"
+	"lockauthor-desc": "禁止用户编辑尚未创建的页面",
+	"action-editall": "编辑所有页面",
+	"right-editall": "编辑整页"
 }

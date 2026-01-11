@@ -2,11 +2,11 @@
 
 namespace LockAuthor;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Title\Title;
-use User;
+use MediaWiki\User\User;
 
 class LockAuthor {
 

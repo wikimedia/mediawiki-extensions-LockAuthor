@@ -2,14 +2,14 @@
 
 namespace LockAuthor;
 
-use ConfigFactory;
 use Exception;
+use MediaWiki\Config\ConfigFactory;
 use MediaWiki\Permissions\Hook\GetUserPermissionsErrorsHook;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Title\Title;
-use MessageSpecifier;
-use User;
+use MediaWiki\User\User;
+use Wikimedia\Message\MessageSpecifier;
 
 /**
  * For the new page creation when viewing the page:

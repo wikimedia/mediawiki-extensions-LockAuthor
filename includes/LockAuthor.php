@@ -10,18 +10,11 @@ use MediaWiki\User\User;
 
 class LockAuthor {
 
-	private Config $config;
-	private PermissionManager $permissionManager;
-	private RevisionLookup $revisionLookup;
-
 	public function __construct(
-		Config $config,
-		PermissionManager $permissionManager,
-		RevisionLookup $revisionLookup
+		private readonly Config $config,
+		private readonly PermissionManager $permissionManager,
+		private readonly RevisionLookup $revisionLookup,
 	) {
-		$this->config = $config;
-		$this->permissionManager = $permissionManager;
-		$this->revisionLookup = $revisionLookup;
 	}
 
 	/**

@@ -33,12 +33,12 @@ use Wikimedia\Message\MessageSpecifier;
  */
 class LockAuthorHooks implements GetUserPermissionsErrorsHook {
 
-	private LockAuthor $lockAuthor;
+	private readonly LockAuthor $lockAuthor;
 
 	public function __construct(
 		ConfigFactory $configFactory,
 		PermissionManager $permissionManager,
-		RevisionLookup $revisionLookup
+		RevisionLookup $revisionLookup,
 	) {
 		$this->lockAuthor = new LockAuthor(
 			$configFactory->makeConfig( 'LockAuthor' ),

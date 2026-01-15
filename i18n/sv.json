@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabelöga"
+			"Sabelöga",
+			"Stefan2255"
 		]
 	},
 	"lockauthor-desc": "Hindrar användare från att redigera sidor de inte skapat",
-	"action-editall": "redigera alla sidor"
+	"action-editall": "redigera alla sidor",
+	"right-editall": "Redigera alla sidor"
 }

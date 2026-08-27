@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"lockauthor-desc": "Zabraňuje používateľom upravovať stránky, ktoré sami nevytvorili",
+	"action-editall": "upraviť všetky stránky",
+	"right-editall": "Upraviť všetky stránky"
+}
